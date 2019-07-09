@@ -1,0 +1,85 @@
+//reset element-ui css
+.horizontal-collapse-transition {
+  transition: 0s width ease-in-out, 0s padding-left ease-in-out, 0s padding-right ease-in-out;
+}
+
+.scrollbar-wrapper {
+  overflow-x: hidden!important;
+  height: 100%;
+}
+
+.el-scrollbar__wrap {
+  overflow-x: hidden;
+}
+
+.is-horizontal {
+  display: none;
+}
+// .el-submenu {
+//   .el-menu-item {
+//     height: 40px;
+//     line-height: 40px;
+//   }
+// }
+// .el-menu-item, .el-submenu__title {
+//   height: 46px;
+//   line-height: 46px;
+// }
+.el-date-editor .el-range-input {
+  width:130px;
+}
+.el-date-editor .el-range-separator {
+  width: 60px;
+}
+.el-select-dropdown__list {
+  margin: 0 0 17px 0;
+}
+.el-pagination {
+  text-align: right;
+}
+.el-form-item__label {
+  width: 120px;
+  color: #99a9bf;
+  font-weight: normal
+}
+.el-table__expanded-cell {
+  background: #f2f2f2;
+}
+.el-table__expanded-cell:hover {
+  background: #f2f2f2 !important;
+}
+.el-table__expand-icon {
+  display: none;
+}
+td.el-table__expand-column {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.el-dialog__header {
+  border-bottom: 1px solid #f2f2f2
+}
+.el-pagination {
+  margin: 20px 0;
+}
+.divider {
+  margin: 5px 0 !important;
+}
+.el-dropdown-menu {
+  padding-top: 0px !important;
+  li {
+    padding: 5px 20px !important
+  }
+  li:first-child {
+    background-color: #0f75ff;
+    border-radius: 4px 4px 0 0;
+    color: #fff;
+    padding: 10px 20px !important
+  }
+}
+
+.el-popper[x-placement^=bottom] .popper__arrow::after {
+  border-bottom-color:#0f75ff !important
+}
+.el-loading-mask {
+  // background-color: rgba(255,255,255,1) !important;
+}

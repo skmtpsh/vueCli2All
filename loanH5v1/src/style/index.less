@@ -1,0 +1,82 @@
+@import './theme.less';
+@import url('./resetweui.less');
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%
+}
+
+body {
+  font-family: 'PingFangSC-Regular', 'Helvetica Neue', Tahoma,Arial,'Hiragino Sans GB','Microsoft Yahei',sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  touch-action: pan-y;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a img {
+  border: 0
+}
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+}
+
+::-webkit-input-placeholder {
+  font-family: -apple-system-font,Helvetica Neue,sans-serif
+}
+
+a {
+  -webkit-touch-callout: none
+}
+ul {
+  list-style: none;
+}
+body,html {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+body {
+  background-color: #fff;
+}
+body.main {
+  // position: fixed;
+}
+body.card {
+  background-color: #ffffff;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  line-height: 1;
+}
+input { -webkit-tap-highlight-color: transparent ; -webkit-appearance: none; }
+.danger {
+  background: #ffedeb;
+  padding: 30px 20px;
+  .font-dpr(28px);
+  color: #fb6451;
+  text-align: left;
+}
+.marg {
+  margin: 60px 30px 0;
+}
+.mg30 {
+  margin: 30px;
+}

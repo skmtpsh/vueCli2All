@@ -1,0 +1,208 @@
+@weuiFontCN: 'Helvetica Neue',Tahoma,Arial,PingFangSC-Regular,'Hiragino Sans GB','Microsoft Yahei',sans-serif;
+@text-danger-color:#ef250f;
+@text-normal-color:#456df1;
+@font-size-75: 75px;
+@font-size-48: 48px;
+@distance30: 30px;
+@distance60: 60px;
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%
+}
+
+body {
+  font-family: @weuiFontCN;
+  // -webkit-overflow-scrolling: touch;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  touch-action: pan-y;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul, dl {
+  list-style: none;
+}
+h2, h3, h4, h5 {
+  font-weight: normal;
+  line-height: 1;
+}
+a img {
+  border: 0
+}
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+}
+
+::-webkit-input-placeholder {
+  font-family: @weuiFontCN
+}
+
+a {
+  -webkit-touch-callout: none
+}
+body,html {
+  // height: 100%;
+  // margin: 0 auto;
+  // overflow-x: hidden;
+  background-color: #f7f7f7;
+  font-size: 75px;
+}
+body {
+  // padding-bottom: 150px;
+}
+body.intro {
+  background: #fff;
+}
+.font75 {
+  font-size: @font-size-75
+}
+.font48 {
+  font-size: 48px;
+}
+.font42 {
+  font-size: 42px;
+}
+.font72 {
+  font-size: 72px;
+}
+.font36 {
+  font-size: 36px;
+}
+.color-danger {
+  color: @text-danger-color
+}
+.color-normal {
+  color: @text-normal-color
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.font-dpr (@font-size) {
+  font-size: @font-size !important;
+  [data-dpr=2]& {
+      font-size: @font-size * 2 !important;
+  }
+  [data-dpr=3]& {
+      font-size: @font-size * 3 !important;
+  }
+}
+body.down {
+  background: #ffd737;
+  position: relative;
+}
+body.main {
+  background: #ffd737;
+  position: relative;
+}
+/*重写vux*/
+.weui-dialog {
+  max-width: none !important;
+}
+.weui-dialog__bd {
+  font-size: 48px !important
+}
+.weui-dialog__ft {
+  font-size: 48px !important;
+  padding: 0 !important;
+}
+.weui-dialog__btn {
+  padding: 72px;
+}
+.weui-toast__content {
+  font-size: 36px !important;
+  line-height: 1;
+  white-space: nowrap;
+}
+.weui-toast {
+  top: 50% !important;
+  width: auto !important;
+  padding: 20px !important;
+  min-height: auto !important;
+}
+.weui-loading {
+  width: 48px !important;
+  height: 48px !important;
+}
+.weui-icon_toast.weui-loading {
+  width: 96px !important;
+  height: 96px !important;
+}
+.weui-icon-success:before {
+  color: #456df1 !important;
+}
+.vux-check-icon {
+  font-size: 48px;
+  a {
+    color: #456df1
+  }
+}
+.weui-cell {
+  padding: 78px 30px !important;
+}
+.weui-cell:before {
+  left: 0 !important;
+}
+.weui-cells {
+  margin-top: 0 !important;
+  line-height: 1 !important;
+  font-size: 48px !important;
+}
+.weui-icon-success, .weui-icon-success-circle, .weui-icon-circle {
+  font-size: 60px !important;
+}
+.weui-cell_access .weui-cell__ft:after {
+  width: 24px !important;
+  height: 24px !important;
+}
+.vux-header .vux-header-title {
+  height: auto !important;
+  line-height: 1 !important;
+  // font-size: 54px !important;
+  overflow: visible !important;
+  // color: #333333!important;
+  // text-align: left!important;
+  font-size: 72px!important;
+  .font-dpr(48px)
+}
+.vux-header {
+  max-height: 999999px;
+  background-color: #456DF1 !important;
+  padding: 120px 0 45px !important;
+}
+.vux-header .vux-header-left .left-arrow {
+}
+.vux-header .vux-header-left .left-arrow:before {
+  border: 1px solid #fff !important; /*no*/
+  border-width: 1px 0 0 1px !important; /*no*/
+  width: 36px!important;
+  height: 36px!important;
+  top: 118px!important;
+  left: 30px!important;
+}
+@media screen and (min-width: 1024px) {
+  .weui-dialog {
+      width: 80% !important;
+  }
+}

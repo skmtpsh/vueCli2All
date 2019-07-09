@@ -1,0 +1,90 @@
+.font-dpr (@font-size) {
+  font-size: @font-size !important;
+  [data-dpr=2]& {
+    font-size: @font-size * 2 !important;
+  }
+  [data-dpr=3]& {
+    font-size: @font-size * 3 !important;
+  }
+}
+.rotate (@deg: 0) {
+  -ms-transform: rotate(@deg); 	/* IE 9 */
+  -moz-transform: rotate(@deg); 	/* Firefox */
+  -o-transform: rotate(@deg); 	/* Opera */
+  -webkit-transform: rotate(@deg); /* Safari 和 Chrome */
+  transform: rotate(@deg);
+}
+.gradient (@start: #22cb64, @end: #1ca150)  {
+  background: -webkit-radial-gradient(@start, @end) !important; /* Safari 5.1 - 6.0 */
+  background: -o-radial-gradient(@start, @end) !important; /* Opera 11.6 - 12.0 */
+  background: -moz-radial-gradient(@start, @end) !important; /* Firefox 3.6 - 15 */
+  background: radial-gradient(@start, @end) !important; /* 标准的语法 */
+}
+// .gradient2 (@start: #22cb64, @end: #1ca150)  {
+//   background: -webkit-radial-gradient(@start, @end) !important; /* Safari 5.1 - 6.0 */
+//   background: -o-radial-gradient(@start, @end) !important; /* Opera 11.6 - 12.0 */
+//   background: -moz-radial-gradient(@start, @end) !important; /* Firefox 3.6 - 15 */
+//   background: radial-gradient(@start, @end) !important; /* 标准的语法 */
+// }
+.setLine(@c: #C7C7C7) {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200%;
+  border: 1px solid @c;
+  color: @c;
+  height: 200%;
+  transform-origin: left top;
+  transform: scale(0.5);
+}
+.setBottomLine(@c: #e7e7e7) {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 2px !important; /*no*/
+  // border-bottom: 1px solid @c !important; /*no*/
+  color: @c;
+  transform-origin: 0 100%;
+  transform: scaleY(0.5);
+}
+.setTopLine(@c: #C7C7C7) {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 2px  !important; /*no*/
+  // border-top: 1px solid @c !important; /*no*/
+  color: @c;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
+.setRightLine(@c: #fff) {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2px !important; /*no*/
+  bottom: 0;
+  // border-right: 1px solid @c  !important; /*no*/
+  opacity: 0.5;
+  color: @c;
+  transform-origin: 0 0;
+  transform: scaleX(0.5);
+}
+.setLeftLine(@c: #fff) {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px !important; /*no*/
+  bottom: 0;
+  // border-left: 1px solid @c  !important;  /*no*/
+  opacity: 0.5;
+  color: @c;
+  transform-origin: 0 0;
+  transform: scaleX(0.5);
+}

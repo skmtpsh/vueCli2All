@@ -1,0 +1,77 @@
+@header-background-color: #456DF1;
+@color-white:#ffffff;
+.borderRadius (@radius: 50%) {
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+.button-background-size (@start:#4d74fd, @end:#4853f5) {
+  background: -webkit-linear-gradient(left, @start, @end);
+  background: -moz-linear-gradient(right, @start, @end);
+  background: linear-gradient(to right, @start, @end);
+}
+.badge (@color:#ff7403, @bgcolor: #fff8f2){
+  // font-size: 43px;
+  .font-dpr(43px);
+  line-height: 1.5;
+  // height: 54px;
+  position: relative;
+  padding: 2px 14px;
+  color: @color;
+  background-color: @bgcolor;
+  // vertical-align: baseline;
+  &:before {
+    .setLine(@color);
+  }
+}
+.flexitem (@mgt: 0, @mgb: 0){
+  margin: @mgt 0 @mgb;
+  display: flex;
+  li {
+    text-align: center;
+    flex: 1;
+  }
+}
+.btnpay(@start:#4d74fd, @end:#4853f5) {
+  vertical-align: middle;
+  display: inline-block;
+  width: 313px;
+  height: 100px;
+  line-height: 102px;
+  color: @color-white;
+  text-align: center;
+  font-size: 44px;
+  .borderRadius(54px);
+  .button-background-size(@start, @end)
+}
+.dangerbox(@color: #ef250f, @bgcolor: #ffe7e4){
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-justify-content: space-between;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  font-size: 36px;
+  // line-height: 42px;
+  position: relative;
+  padding: 30px;
+  color: @color;
+  background-color: @bgcolor;
+}
+.font-dpr (@font-size) {
+  font-size: @font-size;
+  [data-dpr=2]& {
+      font-size: @font-size * 2;
+  }
+  [data-dpr=3]& {
+      font-size: @font-size * 3;
+  }
+}

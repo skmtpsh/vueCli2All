@@ -1,0 +1,419 @@
+@import './element-ui.scss';
+$left: 200px;
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  background: #ebf2fb;
+}
+textarea {
+  font-family: "Arial";
+}
+label {
+  // font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app{
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.container, .page-container {
+  width: 1140px;
+  padding: 0;
+  margin: 0 auto
+}
+
+.login-page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../assets/auth-bg.jpg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center!important;
+  align-items: center!important;
+  flex-direction: column;
+  .logo {
+    margin: -30px 0 60px;
+  }
+}
+
+.padding-content {
+  padding: 4px 0;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus{
+  outline: none;
+ }
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.pr-5 {
+  padding-right: 5px;
+}
+
+.pl-5 {
+  padding-left: 5px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.block {
+  display: block;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.inlineBlock {
+  display: block;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+.logotxt {
+  color: rgba(255,255,255,1);
+  text-align: center;
+  font-size: 18px;
+  height: 60px;
+  line-height: 60px;
+  background-color: #0f75ff;
+  img {
+    width: 80px;
+    vertical-align: middle;
+  }
+}
+.login-container {
+  margin: 0 auto;
+  max-width: 520px;
+  position: relative;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 0 20px rgba(0,0,0,.08);
+  .login-form {
+    padding: 40px;
+  }
+  .text-info {
+    text-align: right;
+    font-size: 12px;
+  }
+}
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: #333d54;
+  z-index: 1501
+}
+.content {
+  flex-direction: column;
+  padding: 60px 0px 0px $left;
+  color: #232323;
+}
+.el-menu {
+  border: 0;
+}
+#header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: $left;
+  bottom: 0;
+  z-index: 1501;
+  background: #fff;
+  line-height: 60px;
+  padding: 0;
+}
+.navbar {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  height: 60px;
+  // border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  background-color: #0f75ff;
+  li {
+    flex: 1;
+    font-size: 14px;
+    // padding: 0 10px;
+    color: #606266;
+    text-align: left;
+    display: flex;
+    a {
+      flex: 1;
+      text-align: center;
+      color: #fff;
+      &:hover {
+        background-color: #0d51b0
+      }
+    }
+    &.nav {
+      width: 300px;
+      flex: none;
+    }
+    &.info {
+      width: 60px;
+      flex: none;
+    }
+    &.toggle {
+      color: #fff;
+      font-size: 28px;
+      flex: none;
+      width: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+#breadnav {
+  padding: 0px 20px;
+  height: 66px;
+  line-height: 66px;
+  background-color: #fff;
+  font-size: 16px;
+}
+#main {
+  margin: 20px;
+  background: #fff;
+  padding: 20px;
+}
+#pagescoll {
+  height: calc(100vh - 60px);
+  width: 100%;
+}
+.text-right {
+  text-align: right;
+}
+.divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: rgba(120, 130, 140, 0.13)
+}
+.filter-box {
+  margin: 10px 0;
+}
+.headname {
+  th, tr {
+    background: #0f75ff;
+    background: #409EFF;
+    color: #fff;
+    // background: #f2f2f2;
+    // color: #000;
+  }
+}
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: "";
+}
+.clearfix:after {
+    clear: both
+}
+.flex {
+  display: flex;
+}
+.flexnum {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.flexitem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  [class^=el-icon-] {
+    font-size: 48px;
+  }
+}
+.tip {
+  padding: 2px 16px;
+  background-color: #ecf8ff;
+  border-radius: 4px;
+  border-left: 5px solid #50bfff;
+  margin: 10px 0;
+}
+.filterBtn {
+}
+.bgitem {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #f2f2f2;
+  background-color: #fafafa;
+  &:nth-child(odd) {
+    background-color: #ebeef5
+  }
+}
+fieldset {
+  margin: 20px 0;
+  border: 1px solid #dcdfe6;
+  background: #fff;
+}
+legend {
+  padding: 0 15px;
+}
+.filterBox {
+  margin: 20px 0;
+}
+.switchOpen {
+  position: relative;
+  &::after {
+    content: '\5F00';
+    position: absolute;
+    left: -46px;
+    top: -13px;
+    font-size: 12px;
+    width: 30px;
+    height: 18px;
+    line-height: 18px;
+    font-style: normal;
+    color: #fff;
+  }
+}
+.switchClose {
+  position: relative;
+  &::after {
+    content: '\5173';
+    position: absolute;
+    left: 34px;
+    top: -13px;
+    font-size: 12px;
+    width: 30px;
+    height: 18px;
+    line-height: 18px;
+    font-style: normal;
+    color: #fff;
+    z-index: 2;
+  }
+}
+.spantxt {
+  span {
+    margin: 5px 15px 5px 0;
+  }
+}
+#nprogress {
+  .bar{
+    background: #333d54 !important; //自定义颜色
+    z-index: 2501 !important;
+  }
+  .spinner {
+    z-index: 2501 !important;
+  }
+  .spinner-icon {
+    border-top-color: #000;
+    border-left-color: #000;
+  }
+}
+input:-webkit-autofill {
+  background-color: #fff;
+  background-image: none;
+  color: #000;
+}
+.iconrz {
+  width: 24px !important;
+  height: 24px !important;
+  &.blue {
+    color: #409EFF
+  }
+  &.danger {
+    color: #F56C6C
+  }
+  &.success {
+    color: #67c23a
+  }
+  &.info {
+    color: #909399
+  }
+  &.warning {
+    color: #e6a23c
+  }
+  &.blue {
+    color: #409EFF
+  }
+}
+.txtrz {
+  font-size: 14px;
+  margin: 0 2px;
+  &.blue {
+    color: #409EFF
+  }
+  &.danger {
+    color: #F56C6C
+  }
+  &.success {
+    color: #67c23a
+  }
+  &.info {
+    color: #909399
+  }
+  &.warning {
+    color: #e6a23c
+  }
+  &.blue {
+    color: #409EFF
+  }
+}
+.routeActive {
+  background-color: #0a408b
+}
